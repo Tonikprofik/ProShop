@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+//impt
 
 const Rating = ({ value, text, color }) => {
   return (
@@ -63,13 +65,19 @@ const Rating = ({ value, text, color }) => {
           }
         ></i>
       </span>
-      <span>{text && text}</span>
+      <span className='numberReview'>{text && text}</span>
     </div>
   );
 };
 
 Rating.defaultProps = {
-    color: '#f8e11',
-}
+  color: "#f8e11",
+};
+
+Rating.propTypes = {
+  value: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired,
+  color: PropTypes.string,
+};
 
 export default Rating;
