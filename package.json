@@ -5,6 +5,7 @@
   "main": "server.js",
   "type": "module",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "bootstrap": "^4.5.3",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -21,6 +22,8 @@
     "server": "nodemon back/server",
     "client": "npm start --prefix front",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node back/seeder",
+    "data:destroy": "node back/seeder -d",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
