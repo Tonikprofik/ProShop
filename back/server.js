@@ -1,4 +1,5 @@
 import express from "express";
+import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 import connectDB from "./config/db.js";
 import dotenv from "dotenv";
 
@@ -15,6 +16,10 @@ app.get("/", (req, res) => {
 });
 
 app.use('/api/products', productRoutes)
+
+// custom error
+app.use(notFound)
+app.use(errorHandler)
 
 const PORT = process.env.PORT || 5000;
 
