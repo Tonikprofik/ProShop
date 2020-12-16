@@ -1,4 +1,4 @@
-import Axios from "axios";
+import axios from "axios";
 //import { json } from "express";
 import {
   PRODUCT_LIST_FAIL,
@@ -10,7 +10,7 @@ export const listProducts = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_LIST_REQUEST });
 
-    const { data } = await Axios.get("/api/products");
+    const { data } = await axios.get("/api/products");
 
     dispatch({
       type: PRODUCT_LIST_SUCCESS,
