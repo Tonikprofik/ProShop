@@ -6,10 +6,13 @@ import Rating from "../components/Rating";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
 import { listProductDetails } from '../actions/productActions'
+import products from '../products'
 
 
 
 const ProductScreen = ({ match }) => {
+  
+
   const [qty, setQty] = useState(0)
 
   const dispatch = useDispatch()
@@ -18,6 +21,7 @@ const ProductScreen = ({ match }) => {
   const { loading, error, product } = productDetails
 
   // const [product, setProduct] = useState({});
+  
 
   useEffect(() => {
     dispatch(listProductDetails(match.params.id))
