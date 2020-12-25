@@ -7,7 +7,7 @@ const router = express.Router();
 // @route   GET /api/products
 // @access  Public
 router.get(
-  "/",
+  "/", //middleware exeption handler
   asyncHandler(async (req, res) => {
     const products = await Product.find({});
     // throw new Error('some error')
