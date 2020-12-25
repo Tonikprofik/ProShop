@@ -56,6 +56,7 @@ const destroyData = async () => {
   }
 };
 
+// node backend/seeder -d
 if (process.argv[2] === "-d") {
   destroyData();
 } else {
