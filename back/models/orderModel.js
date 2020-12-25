@@ -29,7 +29,7 @@ const orderSchema = mongoose.Schema(
     paymentMethod: {
       type: String,
       required: true,
-      default: false,
+      default: false, // -0
     },
     paymentResult: {
       id: { type: String },

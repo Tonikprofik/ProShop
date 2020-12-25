@@ -1,5 +1,5 @@
 {
-  "homepage": "https://tonikprofik.github.io/ProShop/",
+  
   "name": "front",
   "proxy": "http://127.0.0.1:5000",
   "version": "0.1.0",
