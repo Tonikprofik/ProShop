@@ -11,7 +11,6 @@ import { listProductDetails } from '../actions/productActions'
 
 const ProductScreen = ({ history, match }) => {
 
-
   const [qty, setQty] = useState(0)
 
   const dispatch = useDispatch()
@@ -37,7 +36,7 @@ const ProductScreen = ({ history, match }) => {
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`)
   }
-  
+
 
   return (
     <>
@@ -90,11 +89,12 @@ const ProductScreen = ({ history, match }) => {
                     <Row>
                       <Col>Qty</Col>
                       <Col>
-                        <Form.Control as='select' value={qty} onChange={(e) => setQty.apply(e.target.value)}>
+                        <Form.Control as='select' value={qty} onChange={(e) => setQty(e.target.value)}>
                           {
-
-                            [...Array(product.countInStock).keys()].map(x => (
-                              <option key={x + 1} value={x + 1}></option>
+                            [...Array(product.countInStock).keys()].map((x) => (
+                              <option key={x + 1} value={x + 1}>
+                                {x+1}
+                              </option>
                             ))
                           }
                         </Form.Control>
