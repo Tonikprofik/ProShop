@@ -15,7 +15,7 @@ const CartScreen = ({ match, location, history }) => {
     // ?qty=1  
     //console.log(qty);
 
-    const dispatch = useDispatch()d
+    const dispatch = useDispatch()
 
     const cart = useSelector(state => state.cart )
     //const {cartItems} = cart
