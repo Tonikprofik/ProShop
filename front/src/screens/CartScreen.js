@@ -17,6 +17,7 @@ const CartScreen = ({ match, location, history }) => {
 
     const dispatch = useDispatch()
 
+    // states from cartActions
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
     //console.log(cartItems);
@@ -47,7 +48,7 @@ const CartScreen = ({ match, location, history }) => {
                                 </Col>
                                 
                                 <Col md={2}>${item.price}</Col>
-                            
+
                             </Row>
                         </ListGroup.Item>
                     ))}
